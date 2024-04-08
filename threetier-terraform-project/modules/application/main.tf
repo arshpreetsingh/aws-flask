@@ -1,18 +1,16 @@
-################################################################################
 # Local variables
-################################################################################
 locals {
   user_data = <<-EOT
 #!/bin/bash
 # Update packages
 yum update -y
-# Install Python and dependencies
+# Install Python, dependencies, and Git
 yum install python3-pip git -y
 pip3 install flask gunicorn requests
-# Copy Flask application code
-mkdir -p /home/ec2-user/app && cd /home/ec2-user/app
-aws s3 cp s3://<your-flask-code-bucket>/app_code/ . --recursive
+# Clone the GitHub repository into your application directory
+git clone https://github.com/arshpreetsingh/aws-flask.git /home/ec2-user/app
 # Start the Flask application
+cd /home/ec2-user/app 
 gunicorn --bind 0.0.0.0:5000 app:app
   EOT
 }
