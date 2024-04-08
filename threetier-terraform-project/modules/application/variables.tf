@@ -1,25 +1,25 @@
 variable "asg_sg_name" {
   description = "Name of the autoscaling group security group"
   type        = string
-  default     = "demo-asg-sg"
+  default     = "test-asg-sg"
 }
 
 variable "asg_sg_description" {
   description = "Description of the autoscaling group security group"
   type        = string
-  default     = "demo-asg-sg"
+  default     = "test-asg-sg"
 }
 
 variable "asg_sg_tags" {
   description = "Tags for autoscaling group security group"
   type        = map(string)
-  default     = { "Name" = "demo-asg-sg", "created-by" = "terraform" }
+  default     = { "Name" = "test-asg-sg", "created-by" = "terraform" }
 }
 
 variable "asg_name" {
   description = "Name of the autoscaling group"
   type        = string
-  default     = "demo-asg"
+  default     = "test-asg"
 }
 
 variable "asg_min_size" {
@@ -55,13 +55,13 @@ variable "asg_health_check_type" {
 variable "asg_launch_template_name" {
   description = "Name of the autoscaling group launch template"
   type        = string
-  default     = "demo-lt"
+  default     = "test-lt"
 }
 
 variable "asg_launch_template_description" {
   description = "Description of the autoscaling group security group"
   type        = string
-  default     = "demo-lt"
+  default     = "test-lt"
 }
 
 variable "asg_update_default_version" {
@@ -103,7 +103,7 @@ variable "asg_create_iam_instance_profile" {
 variable "asg_iam_role_name" {
   description = "Auto scaling group iam role name"
   type        = string
-  default     = "demo-asg-iam-role"
+  default     = "test-asg-iam-role"
 }
 
 variable "asg_iam_role_path" {
@@ -115,13 +115,13 @@ variable "asg_iam_role_path" {
 variable "asg_iam_role_description" {
   description = "Auto scaling group iam role description"
   type        = string
-  default     = "demo-asg-iam-role"
+  default     = "test-asg-iam-role"
 }
 
 variable "asg_iam_role_tags" {
   description = "Auto scaling group iam role tags"
   type        = map(string)
-  default     = { "Name" = "demo-asg-iam-role", "created-by" = "terraform" }
+  default     = { "Name" = "test-asg-iam-role", "created-by" = "terraform" }
 }
 
 variable "asg_block_device_mappings_volume_size_0" {
@@ -139,19 +139,19 @@ variable "asg_block_device_mappings_volume_size_1" {
 variable "asg_instance_tags" {
   description = "Auto scaling group instance tags"
   type        = map(string)
-  default     = { "Name" = "demo-asg-instance", "created-by" = "terraform" }
+  default     = { "Name" = "test-asg-instance", "created-by" = "terraform" }
 }
 
 variable "asg_volume_tags" {
   description = "Auto scaling group volume tags"
   type        = map(string)
-  default     = { "Name" = "demo-asg-volume", "created-by" = "terraform" }
+  default     = { "Name" = "test-asg-volume", "created-by" = "terraform" }
 }
 
 variable "asg_tags" {
   description = "Auto scaling group tags"
   type        = map(string)
-  default     = { "Name" = "demo-asg", "created-by" = "terraform" }
+  default     = { "Name" = "test-asg", "created-by" = "terraform" }
 }
 
 variable "vpc_id" {

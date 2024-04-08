@@ -11,7 +11,7 @@ variable "region" {
 variable "vpc_name" {
   description = "Name of the VPC"
   type        = string
-  default     = "demo-vpc"
+  default     = "test-vpc"
 }
 
 variable "vpc_cidr" {
@@ -47,7 +47,7 @@ variable "vpc_database_subnets" {
 variable "vpc_tags" {
   description = "Tags to apply to vpc peering for api x data vpc"
   type        = map(string)
-  default     = { "Name" = "demo-vpc", "created-by" = "terraform" }
+  default     = { "Name" = "test-vpc", "created-by" = "terraform" }
 }
 
 
@@ -56,22 +56,22 @@ variable "vpc_tags" {
 # ASG Configuration
 variable "asg_sg_name" {
   type        = string
-  default     = "demo-asg-sg"
+  default     = "test-asg-sg"
 }
 
 variable "asg_sg_description" {
   type        = string
-  default     = "demo-asg-sg"
+  default     = "test-asg-sg"
 }
 
 variable "asg_sg_tags" {
   type        = map(string)
-  default     = { "Name" = "demo-asg-sg", "created-by" = "terraform" }
+  default     = { "Name" = "test-asg-sg", "created-by" = "terraform" }
 }
 
 variable "asg_name" {
   type        = string
-  default     = "demo-asg"
+  default     = "test-asg"
 }
 
 
@@ -105,7 +105,7 @@ variable "asg_health_check_type" {
 # ALB Configuration
 variable "alb_sg_name" {
   type        = string
-  default     = "demo-alb-sg"
+  default     = "test-alb-sg"
 }
 
 variable "alb_sg_ingress_cidr_blocks" {
@@ -115,17 +115,17 @@ variable "alb_sg_ingress_cidr_blocks" {
 
 variable "alb_sg_description" {
   type        = string
-  default     = "demo-alb-sg"
+  default     = "test-alb-sg"
 }
 
 variable "alb_sg_tags" {
   type        = map(string)
-  default     = { "Name" = "demo-alb-sg", "created-by" = "terraform" }
+  default     = { "Name" = "test-alb-sg", "created-by" = "terraform" }
 }
 
 variable "alb_name" {
   type        = string
-  default     = "demo-alb"
+  default     = "test-alb"
 }
 
 
@@ -136,7 +136,7 @@ variable "alb_http_tcp_listeners_port" {
 
 variable "alb_target_group_name" {
   type        = string
-  default     = "demo-alb-tg"
+  default     = "test-alb-tg"
 }
 
 variable "alb_target_groups_backend_port" {
@@ -146,29 +146,29 @@ variable "alb_target_groups_backend_port" {
 
 variable "alb_tags" {
   type        = map(string)
-  default     = { "Name" = "demo-alb", "created-by" = "terraform" }
+  default     = { "Name" = "test-alb", "created-by" = "terraform" }
 }
 
 
 # RDS Configuration
 variable "rds_sg_name" {
   type        = string
-  default     = "demo-rds-sg"
+  default     = "test-rds-sg"
 }
 
 variable "rds_sg_description" {
   type        = string
-  default     = "demo-rds-sg"
+  default     = "test-rds-sg"
 }
 
 variable "rds_sg_tags" {
   type        = map(string)
-  default     = { "Name" = "demo-rds-sg", "created-by" = "terraform" }
+  default     = { "Name" = "test-rds-sg", "created-by" = "terraform" }
 }
 
 variable "rds_identifier" {
   type        = string
-  default     = "demo-rds"
+  default     = "test-rds"
 }
 
 variable "rds_mysql_engine" {
@@ -208,12 +208,12 @@ variable "rds_max_allocated_storage" {
 
 variable "rds_db_name" {
   type        = string
-  default     = "demo_mysql"
+  default     = "test_mysql"
 }
 
 variable "rds_username" {
   type        = string
-  default     = "demo_user"
+  default     = "test_user"
 }
 
 variable "rds_port" {

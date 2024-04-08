@@ -2,7 +2,7 @@
 variable "vpc_name" {
   description = "Name of the VPC"
   type        = string
-  default     = "demo-vpc"
+  default     = "test-vpc"
 }
 
 variable "vpc_cidr" {
@@ -38,5 +38,5 @@ variable "vpc_database_subnets" {
 variable "vpc_tags" {
   description = "Tags to apply to vpc peering for api x data vpc"
   type        = map(string)
-  default     = { "Name" = "demo-vpc", "created-by" = "terraform" }
+  default     = { "Name" = "test-vpc", "created-by" = "terraform" }
 }

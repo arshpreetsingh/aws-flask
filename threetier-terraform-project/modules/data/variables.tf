@@ -1,25 +1,25 @@
 variable "rds_sg_name" {
   description = "Relational database service security group name"
   type        = string
-  default     = "demo-rds-sg"
+  default     = "test-rds-sg"
 }
 
 variable "rds_sg_description" {
   description = "Relational database service security group description"
   type        = string
-  default     = "demo-rds-sg"
+  default     = "test-rds-sg"
 }
 
 variable "rds_sg_tags" {
   description = "Relational database service security group tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds-sg", "created-by" = "terraform" }
+  default     = { "Name" = "test-rds-sg", "created-by" = "terraform" }
 }
 
 variable "rds_identifier" {
   description = "Relational database service identifier"
   type        = string
-  default     = "demo-rds"
+  default     = "test-rds"
 }
 
 variable "rds_mysql_engine" {
@@ -67,13 +67,13 @@ variable "rds_max_allocated_storage" {
 variable "rds_db_name" {
   description = "Relational database service db name"
   type        = string
-  default     = "demo_mysql"
+  default     = "test_mysql"
 }
 
 variable "rds_username" {
   description = "Relational database service username"
   type        = string
-  default     = "demo_user"
+  default     = "test_user"
 }
 
 variable "rds_port" {
@@ -157,31 +157,31 @@ variable "rds_monitoring_interval" {
 variable "rds_tags" {
   description = "Relational database service tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "terraform" }
+  default     = { "Name" = "test-rds", "created-by" = "terraform" }
 }
 
 variable "rds_db_instance_tags" {
   description = "Relational database service db instance tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "terraform" }
+  default     = { "Name" = "test-rds", "created-by" = "terraform" }
 }
 
 variable "rds_db_option_group_tags" {
   description = "Relational database service db option group tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "terraform" }
+  default     = { "Name" = "test-rds", "created-by" = "terraform" }
 }
 
 variable "rds_db_parameter_group_tags" {
   description = "Relational database service db parameter group tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "terraform" }
+  default     = { "Name" = "test-rds", "created-by" = "terraform" }
 }
 
 variable "rds_db_subnet_group_tags" {
   description = "Relational database service db subnet group tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "terraform" }
+  default     = { "Name" = "test-rds", "created-by" = "terraform" }
 }
 
 variable "vpc_id" {
