@@ -13,13 +13,7 @@ provider "aws" {
 
 module "alb_http_sg" { 
   source = "./modules/presentation"
-
-  #name        = var.alb_sg_name
   vpc_id      = module.my_vpc.vpc_id
-  #description = var.alb_sg_description
-  #ingress_cidr_blocks = var.alb_sg_ingress_cidr_blocks
-  #tags                = var.alb_sg_tags
-  # ... (Pass variables to your wrapper module)
 }
 
 
@@ -79,5 +73,4 @@ module "my_application" {
   security_group_id = module.my_alb.alb_security_group_id
   vpc_zone_identifier = module.my_vpc.private_subnets
 
-  # ... variables and dependencies for the application
 }

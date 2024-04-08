@@ -50,9 +50,6 @@ variable "vpc_tags" {
   default     = { "Name" = "test-vpc", "created-by" = "terraform" }
 }
 
-
-
-
 # ASG Configuration
 variable "asg_sg_name" {
   type        = string
@@ -99,8 +96,6 @@ variable "asg_health_check_type" {
   type        = string
   default     = "EC2"
 }
-
-
 
 # ALB Configuration
 variable "alb_sg_name" {
@@ -225,4 +220,3 @@ variable "rds_multi_az" {
   type        = bool
   default     = false
 }
-# ... Other RDS variables

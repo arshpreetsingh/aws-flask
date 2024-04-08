@@ -1,9 +1,4 @@
-# Terraform Kubernetes work: https://www.youtube.com/watch?v=ebSAb-ERqAM
-# Siple thre tier on Terraform Cloud itself: https://medium.com/@ojomohalex/construct-and-deploy-a-3-tier-architecture-using-terraform-modules-via-terraform-cloud-ci-cd-d9253448114
-################################################################################
 # Supporting Resources
-################################################################################
-
 module "alb_http_sg" {
   source  = "terraform-aws-modules/security-group/aws//modules/http-80"
   version = "~> 4.0"
@@ -16,9 +11,7 @@ module "alb_http_sg" {
   tags                = var.alb_sg_tags
 }
 
-################################################################################
 # Application load balancer (ALB)
-################################################################################
 
 module "alb" {
   source          = "terraform-aws-modules/alb/aws"

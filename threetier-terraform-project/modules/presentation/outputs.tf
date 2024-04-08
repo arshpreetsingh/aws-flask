@@ -1,7 +1,4 @@
-
-################################################################################
 # Application load balancer (ALB) outputs
-################################################################################
 
 output "alb_security_group_id" {
   description = "The ID of the security group"

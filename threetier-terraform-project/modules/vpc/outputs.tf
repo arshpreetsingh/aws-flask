@@ -1,12 +1,4 @@
-#output "vpc_id" {
-#  value = aws_vpc.my_vpc.id  # Replace with your VPC resource ID
-#}
-
-
-
-################################################################################
 # Virtual private cloud (VPC) outputs
-################################################################################
 
 output "vpc_id" {
   description = "The ID of the VPC"
